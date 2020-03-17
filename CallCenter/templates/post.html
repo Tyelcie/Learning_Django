@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>关爱中心登记表</title>
+</head>
+<body>
+    {%extends 'base.html' %}
+
+    {% block mainbody %}
+    <form action="/search-post" method="post">
+        {% csrf_token %}
+        <p>来源</p>
+        <input type="text" name="general_source">
+        <p>来电号码</p>
+        <input type='text' name='general_innum'>
+        <p></p>
+        <input type="submit" value="提交">
+    </form>
+ 
+    <p>{{ msg }}</p>
+    {% endblock %}
+</body>
+</html>
