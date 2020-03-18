@@ -1,3 +1,4 @@
 from django.contrib import admin
+from cc.models import inbound
 
-# Register your models here.
+admin.site.register(inbound)
